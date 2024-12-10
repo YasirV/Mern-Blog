@@ -5,6 +5,7 @@ import Article from "./pages/Article";
 import ArticlesList from "./pages/ArticlesList";
 import About from "./pages/About";
 import Navbar from "./components/Navbar";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/articles-list" element={<ArticlesList />} />
-          <Route path="/article" element={<Article />} />
+          <Route path="/article/:name" element={<Article />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </Router>
